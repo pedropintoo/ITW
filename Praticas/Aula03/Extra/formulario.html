@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="Author" content="Pedro Pinto">
+    <meta charset="utf-8" />
+    <title> Formulário </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <style type="text/css">
+        body,html {
+            background-image: url("background.jpg");
+            background-repeat: repeat; 
+            background-size: 100%; 
+            background-attachment: fixed;
+            font: 1em normal 10px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-style: 1em;
+            
+        }
+        p,fieldset {  
+            color: #ffffff;
+        }
+        #titulo {
+            color:rgb(255, 144, 7);
+            font-family: 'Lobster', cursive ;
+        }
+        
+        
+    </style>
+    
+</head>
+<body>
+
+    <h1 id="titulo">&nbsp; Formulário 2</h1>
+
+
+    <form name="PersonalData" action="http://192.168.160.36/FormEcho.aspx" method="post" enctype="multipart/form-data">
+        <div id="Top">
+        <input type="text" name="FirstName" placeholder="Nome" required/>
+        <input type="text" name="LastName" placeholder="Sobrenome" required/>
+        <input type="password" name="Password" placeholder="Senha" required/>
+        <select name="genero" required>
+            <option value="" disabled selected hidden>Género...</option>
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+            <option value="3">Não Binário</option>
+        </select>
+        </div>
+
+        <br>
+        <!-- <input type="hidden" name="FormName" value="UserForm"/> Permite esconder uma determinada informação, para mostrar quando prentermos-->
+        <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>     
+        <fieldset name="Meios de transporte" style="width: 150px;">
+            <legend>Meios de transporte</legend>
+            <input id="r1" type="radio" name="vehicle" value="Trotinete"><label for="r1">Trotinete</label><br />
+            <input id="r2" type="radio" name="vehicle" value="Carro"><label for="r2">Carro</label><br />
+            <input id="r3" type="radio" name="vehicle" value="Comboio"><label for="r3">Comboio</label><br />
+            <input id="r4" type="radio" name="vehicle" value="Outro"><label for="r4">Outro</label><br />
+        </fieldset>
+
+        <p>
+            <input type="file" name="photo"><br />
+            <input type="submit" name="Button" value="Enviar formulário"/>
+            <input type="reset" name="resetBtn" value="Limpar Formulário">
+        </p>
+
+        <fieldset name="Idade" style="width: 700px;">
+            <legend>
+                AVISO
+            </legend>
+            Toda a informação é tratada de uma forma pouco segura **talvez até desconhecida pelo programador :D** 
+        </fieldset>
+        
+    </form>
+    
+</body>
+</html>

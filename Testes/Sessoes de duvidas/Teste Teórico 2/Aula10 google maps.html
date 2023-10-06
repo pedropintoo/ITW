@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aula 8</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<style>
+	.no_error{display:none !important;}
+	.error{display: block !important; margin-bottom:5px; border-radius: 3px; text-align:center;}
+</style>
+<script type="text/javascript">
+	function validar(){
+		var avancar = 1
+		var name = document.getElementById("PersonData_Name")
+		var name_error = document.getElementById("PersonData_Name_Error")
+
+		if (name.value.trim().length < 5 || name.value.trim().length > 100){
+			if(name_error.classList.contains("no_error")){
+				name_error.classList.remove("no_error")
+				name_error.classList.add("error")
+			}
+			avancar=0
+		}else{
+			if(name_error.classList.contains("error")){
+				name_error.classList.remove("error")
+				name_error.classList.add("no_error")
+			}
+			avancar=1
+		}
+		
+		
+		if (avancar==1){
+			document.getElementById('mapa').src ="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM0ZNlzZS6wulKFOv1s6PARvuXmGI-paM&q="+name.value.trim()+"&attribution_source=Google+Maps+Embed+API"
+		}
+		return true
+	}
+	
+	
+	function validar1(){
+		var avancar = 1
+		var name = document.getElementById("PersonData_Name1")
+		var name_error = document.getElementById("PersonData_Name1_Error")
+
+		if (name.value.trim().length < 5 || name.value.trim().length > 100){
+			if(name_error.classList.contains("no_error")){
+				name_error.classList.remove("no_error")
+				name_error.classList.add("error")
+			}
+			avancar=0
+		}else{
+			if(name_error.classList.contains("error")){
+				name_error.classList.remove("error")
+				name_error.classList.add("no_error")
+			}
+			avancar=1
+		}
+		
+		
+		if (avancar==1){
+			document.getElementById('mapa').src ="https://www.google.com/maps/embed/v1/search?key=AIzaSyDM0ZNlzZS6wulKFOv1s6PARvuXmGI-paM&q="+name.value.trim()
+		}
+		return true
+	}
+	
+	
+	function validar2(){
+		var avancar = 1
+		var name = document.getElementById("PersonData_Name2")
+		var name_error = document.getElementById("PersonData_Name2_Error")
+		var namec = document.getElementById("PersonData_Name3")
+		var namec_error = document.getElementById("PersonData_Name3_Error")
+
+		if (namec.value.trim().length < 5 || namec.value.trim().length > 100){
+			if(namec_error.classList.contains("no_error")){
+				namec_error.classList.remove("no_error")
+				namec_error.classList.add("error")
+			}
+			avancar=0
+		}else{
+			if(namec_error.classList.contains("error")){
+				namec_error.classList.remove("error")
+				namec_error.classList.add("no_error")
+			}
+			avancar=1
+		}
+		
+		if (name.value.trim().length < 5 || name.value.trim().length > 100){
+			if(name_error.classList.contains("no_error")){
+				name_error.classList.remove("no_error")
+				name_error.classList.add("error")
+			}
+			avancar=0
+		}else{
+			if(name_error.classList.contains("error")){
+				name_error.classList.remove("error")
+				name_error.classList.add("no_error")
+			}
+			avancar=1
+		}
+		
+		
+		if (avancar==1){
+			document.getElementById('mapa').src ="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDM0ZNlzZS6wulKFOv1s6PARvuXmGI-paM&origin="+name.value.trim()+"&destination="+namec.value.trim()
+		}
+		return true
+	}
+	
+	
+</script>
+
+</head>
+<body>
+
+           <div class="col-xs-12 text-center"><hr /></div>
+			<div class="col-xs-2 form-control-static text-right">Local:</div>
+            <div class="col-xs-8">
+            	<input type="text" name="Name" id="PersonData_Name" placeholder="(5 a 100 caracteres)" class="form-control" />
+            	<div id="PersonData_Name_Error" class="no_error form-control-static text-danger bg-danger">    !!! - O local deve ter 5 a 100 caracteres! <br></div>
+            </div>
+            
+            <div class="col-xs-2 text-center">
+            <button onClick="return validar()" style="width:100px; height:35px;" type="submit" name="Button" id="Submit data"  class="btn btn-primary">Procurar</button></div>
+            
+            <div class="col-xs-12 text-center"><hr /></div>
+            
+            
+			<div class="col-xs-2 form-control-static text-right">Características:</div>
+            <div class="col-xs-8">
+            	<input type="text" name="Name1" id="PersonData_Name1" placeholder="(5 a 100 caracteres)" class="form-control" />
+            	<div id="PersonData_Name1_Error" class="no_error form-control-static text-danger bg-danger">    !!! - As características devem ter 5 a 100 caracteres! <br></div>
+            </div>
+            
+            <div class="col-xs-2 text-center">
+            <button onClick="return validar1()" style="width:100px; height:35px;" type="submit" name="Button" id="Submit data"  class="btn btn-primary">Procurar</button></div>
+            
+            <div class="col-xs-12 text-center"><hr /></div>
+            
+            
+            
+            <div class="col-xs-2 form-control-static text-right">Local de Partida:</div>
+            <div class="col-xs-8">
+            	<input type="text" name="Name2" id="PersonData_Name2" placeholder="(5 a 100 caracteres)" class="form-control" />
+            	<div id="PersonData_Name2_Error" class="no_error form-control-static text-danger bg-danger">    !!! - O local deve ter 5 a 100 caracteres! <br></div>
+            </div>
+            <div class="col-xs-12 text-center"><br /></div>
+            <div class="col-xs-2 form-control-static text-right">Local de chegada:</div>
+            <div class="col-xs-8">
+            	<input type="text" name="Name3" id="PersonData_Name3" placeholder="(5 a 100 caracteres)" class="form-control" />
+            	<div id="PersonData_Name3_Error" class="no_error form-control-static text-danger bg-danger">    !!! - O local deve ter 5 a 100 caracteres! <br></div>
+            </div>
+            
+            <div class="col-xs-2 text-center">
+            <button onClick="return validar2()" style="width:100px; height:35px;" type="submit" name="Button" id="Submit data"  class="btn btn-primary">Procurar</button></div>
+            
+            
+            
+            <div class="col-xs-12 text-center"><hr /></div>
+            
+            
+            
+            
+           <div class="col-xs-12 text-center"> <iframe style="width:80%; height:500px;" id="mapa" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDM0ZNlzZS6wulKFOv1s6PARvuXmGI-paM&q=cantanhede&attribution_source=Google+Maps+Embed+API" allowfullscreen></iframe></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

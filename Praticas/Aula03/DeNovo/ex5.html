@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        body {font-family: 'Open Sans', sans-serif;}
+        .rowip {
+            margin-bottom:6px;
+        }
+    </style>
+
+    <title>Formulário</title>
+</head>
+<body>
+
+    <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+        <input type="hidden" name="FormName" value="UserForm" />
+        
+        <div class="mainDiv" style="margin-left:100px;margin-right:100px">
+            <h1>Informação Pessoal</h1>
+            
+            
+            <fieldset>
+                <legend>Informação Pessoal</legend>  
+                <div class="Ip">
+                    <div class="rowip">
+                        <div style="width: 10%; float:left">
+                            <label for="select1"> Curso:</label>
+                        </div>
+                        <div>
+                            <select  name="Curso" id="select1">
+                                <option value="" disabled selected hidden> Qual é o curso que frequenta...</option> 
+                                <option value="1">Licenciatura em Engenharia Informática</option>
+                                <option value="2">Mestrado Integrado em Engenharia de Computadores e Telemática</option>
+                                <option value="3">Mestrado Integrado Em Engenharia Eletrónica e Telecomunicações</option>
+                                <option value="4">Outro</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="rowip">
+                        <div style="width: 10%; float:left">
+                            <label for="nome"> Nome:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="FirstName" placeholder="Nome" id="nome"/>
+                        </div>
+                        
+                    </div>
+                    <div class="rowip">
+                        <div style="width: 10%; float:left">
+                            <label for="sobrenome"> Sobrenome:</label>
+                        </div>
+                        <div>
+                            <input type="text" name="LastName" placeholder="Sobrenome" id="sobrenome" />
+                        </div>
+                    </div>
+                    <div class="rowip">
+                        <div style="width: 10%; float:left">
+                            <label for="password"> Password:</label>
+                        </div>
+                        <div>
+                            <input type="password" name="Password" placeholder="Digite a palavra passe" id="password" />
+                        </div>
+                    </div>
+
+                </div>
+            </fieldset>
+            <label for="comentarios">
+                <fieldset>
+                    <legend>Comentários</legend>
+                    <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários" id="comentarios"></textarea>
+                </fieldset>
+            </label>
+            
+            
+            <div class="row" style="width: 100%;">
+                <div style="width: 50%; float: left;">
+                    <fieldset>
+                        <legend> Meios de Transporte </legend>
+                        <input type="checkbox" name="Transporte" value="Bicicleta" id="bic"> <label for="bic">Bicicleta</label> <br/>
+                        <input type="checkbox" name="Transporte" value="Carro" id="car"> <label for="car">Carro</label> <br/>
+                        <input type="checkbox" name="Transporte" value="Comboio" id="com"> <label for="com">Comboio</label>
+                    </fieldset>
+                </div>
+                <div> 
+                    <fieldset>
+                        <legend> Cor Preferida </legend>
+                        <input type="radio" name="cor" value="Azul" id="azu"> <label for="azu">Azul</label> <br/>
+                        <input type="radio" name="cor" value="Verde" id="verd"> <label for="verd">Verde</label> <br/>
+                        <input type="radio" name="cor" value="Vermelho" id="verm"> <label for="verm">Vermelho</label> <br/>
+                        <input type="radio" name="cor" value="Outra" id="out"> <label for="out">Outra</label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="buttons" style="text-align: center; margin-top: 30px;">
+                <input type="submit" name="submitBtn" value="Enviar" style="width: 65px; height: 35px;"/>
+                <input type="reset" name="resetBtn" value="Reset" style="width: 65px; height: 35px;"/>
+            </div>
+            
+
+        </div>
+        
+    </form>
+</body>
+</html>

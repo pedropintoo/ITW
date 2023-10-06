@@ -1,0 +1,5 @@
+﻿body { font-family: 'Open Sans', sans-serif; }
+div.bannerTop { height: 480px; margin: auto; border-bottom: solid 1px #444; border-top: solid 1px #444; 
+    background-image: url('banner.jpg');
+    background-position: center center; background-repeat: no-repeat; background-size: cover; }
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+        <style>
+            body, input, select, textarea {
+                font-family: 'Open Sans', sans-serif;
+            }
+            body{
+                padding: 60 60 60 60;
+                
+            }
+            table {
+                background-attachment: fixed;             
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+            <input type="hidden" name="FormName" value="UserForm" />
+            <h1>Informação pessoal</h1>
+
+            <fieldset>
+                <legend>Informações pessoais</legend>
+                <dl>
+                    <dt>Curso:</dt>
+                    <dd>
+                        <select name="Curse">
+                            <option value="" disabled selected hidden>Escolha uma destas opções</option>
+                            <option value="1">Licenciatura em engenharia informática</option>
+                            <option value="2">Mestrado em engenharia informática</option>
+                            <option value="3">Douturamento em engenharia informática</option>
+                        </select>
+                    </dd>
+                    <dt>Nome:</dt>
+                    <dd>
+                        <input type="text" name="Firstname" placeholder="Nome" tabindex="10"/>
+                    </dd>
+                    <dt>Sobrenome:</dt>
+                    <dd>
+                        <input type="text" name="Lastname" placeholder="Sobrenome" tabindex="10"/>
+                    </dd>
+                    <dt>Password:</dt>
+                    <dd>
+                        <input type="password" name="Password" placeholder="Digite uma palavra-passe" tabindex="10"/>
+                    </dd>
+                </dl>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentários</legend>
+                <dl>
+                    <dd>
+                        <textarea name="Comments" cols="80" rows="4" placeholder="Escreva aqui alguns comentários" tabindex="10"></textarea>
+                    </dd>
+                </dl>
+            </fieldset>
+
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <fieldset>
+                <legend>Meios de transporte</legend>
+                <dl>
+                    <dd>
+                        <input type="checkbox" name="vehicle" value="Bicicleta" id="Bicicleta">
+                        <label for="Bicicleta">Bicicleta</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <input type="checkbox" name="vehicle" value="Carro" id="Carro">
+                        <label for="Carro">Carro</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <input type="checkbox" name="vehicle" value="Autocarro" id="Autocarro">
+                        <label for="Autocarro">Autocarro</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <input type="checkbox" name="vehicle" value="Comboio" id="Comboio">
+                        <label for="Comboio">Comboio</label>
+                    </dd>
+                </dl>
+            </fieldset>
+            <fieldset>
+                <legend>Cor Favorita</legend>
+                <dl>
+                    <dd>
+                        <input type="radio" name="color" value="Azul" id="Azul">
+                        <label for="Azul">Azul</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <input type="radio" name="color" value="Vermelho" id="Vermelho">
+                        <label for="Vermelho">Vermelho</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <input type="radio" name="color" value="Verde" id="Verde">
+                        <label for="Verde">Verde</label>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <input type="radio" name="color" value="Outro" id="Outro">
+                        <label for="Outro">Outro</label>
+                    </dd>
+                </dl>
+            </fieldset>
+            <dl>
+                <dd>
+                    <input type="submit" name="Button" value="Submeter" />
+                    <input type="reset" name="Reset" value="Limpar formulário">
+                </dd>
+    </body>
+</html>

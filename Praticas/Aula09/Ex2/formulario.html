@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <h3>Formulário</h3>
+        <br>
+        <form id="myFrom" class="row g-3 needs-validation" novalidate action="http://192.168.160.36/FormEcho.aspx" method="post">
+            <div class="col-md-6 form-floating" id="v1">
+                <input type="text" class="form-control" name="FirstName" id="validationCustom01" value="" pattern=".{10,100}" required>
+                <label for="validationCustom01" class="form-label">Nome</label>
+                <div class="invalid-feedback"><i class="fa fa-warning"></i> Insira o seu nome.</div>
+            </div>
+            <div class="col-md-6 form-floating" id="v2">
+                <input type="text" class="form-control" name="Morada" id="validationCustom02" value="" pattern=".{20,200}" required>
+                <label for="validationCustom02" class="form-label">Morada</label>
+                <div class="invalid-feedback"><i class="fa fa-warning"></i> Insira a sua Morada.</div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating" id="v3">
+                    <input type="email" class="form-control" name="Username" id="validationCustom03" required>
+                    <label for="validationCustom03" class="form-label">Email</label>
+                    <div class="invalid-feedback"><i class="fa fa-warning"></i> Insira um email válido.</div>
+                </div>
+                <div class="form-floating mt-3">
+                    <input type="text" class="form-control" name="preco" id="preco" style="height: 85px;" readonly>
+                    <label for="preco" class="form-label">Preço Máximo</label>
+                </div>
+            </div>
+            
+
+            <div class="col-md-6 form-floating" id="local">
+                
+                <div class="form-control" style="height: 160px;">
+                   
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local1" value="100">
+                        <label class="form-check-label" for="local1">Relva Frente (100€)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local2" value="80">
+                        <label class="form-check-label" for="local2">Relva Trás (80€)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local3" value="50">
+                        <label class="form-check-label" for="local3">Bancada lateral (50€)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local4" value="65">
+                        <label class="form-check-label" for="local4">Bancada central (65€)</label>
+                        <div class="invalid-feedback small"><i class="fa fa-warning"></i> Escolha, pelo menos, uma das opções.</div>
+                    </div>
+                </div>
+                <label class="col-2">Local</label>
+                
+            </div>  
+            <div class="col-11 offset-3">
+                <button id="submit" class="btn btn-primary col-3 ms-3" type="submit"><i class="fa fa-send"></i> Enviar Formulário</button>
+                <button class="btn btn-danger col-3 ms-2" type="reset"><i class="fa fa-trash-o"></i> Limpar Formulário</button>
+            </div>
+            
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Validação</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="modaltext">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="save" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+    <script src="formulario.js"></script>
+    <!-- Bootstrap Bundle -->
+    
+</body>
+</html>
+

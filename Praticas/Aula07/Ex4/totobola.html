@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Totobola</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="totobola.css"/>
+</head>
+<body>
+    <div class="bannerTop"></div>
+    <div class="container py-2">
+        <form action="http://192.168.160.36/FormEcho.aspx" method="post">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th class="">Jogo</th>
+                        <th class="">1</th>
+                        <th class="">X</th>
+                        <th class="">2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>01</strong> Sporting-Arouca</td>
+                        <td><input type="checkbox" ID="Jogo01_1" class="jogo" name="Jogo1_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo01_x" class="jogo" name="Jogo1_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo01_2" class="jogo" name="Jogo1_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>02</strong> Estoril-Tondela</td>
+                        <td><input type="checkbox" ID="Jogo02_1" class="jogo" name="Jogo2_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo02_x" class="jogo" name="Jogo2_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo02_2" class="jogo" name="Jogo2_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>03</strong> Moreirense-V. Setúbal</td>
+                        <td><input type="checkbox" ID="Jogo03_1" class="jogo" name="Jogo3_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo03_x" class="jogo" name="Jogo3_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo03_2" class="jogo" name="Jogo3_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>04</strong> Feirense-Belenenses</td>
+                        <td><input type="checkbox" ID="Jogo04_1" class="jogo" name="Jogo4_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo04_x" class="jogo" name="Jogo4_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo04_2" class="jogo" name="Jogo4_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>05</strong> Rio Ave-Boavista</td>
+                        <td><input type="checkbox" ID="Jogo05_1" class="jogo" name="Jogo5_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo05_x" class="jogo" name="Jogo5_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo05_2" class="jogo" name="Jogo5_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>06</strong> Marítimo-Braga</td>
+                        <td><input type="checkbox" ID="Jogo06_1" class="jogo" name="Jogo6_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo06_x" class="jogo" name="Jogo6_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo06_2" class="jogo" name="Jogo6_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>07</strong> P. Ferreira-Chaves</td>
+                        <td><input type="checkbox" ID="Jogo07_1" class="jogo" name="Jogo7_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo07_x" class="jogo" name="Jogo7_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo07_2" class="jogo" name="Jogo7_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>08</strong> Gil Vicente-Portimon.</td>
+                        <td><input type="checkbox" ID="Jogo08_1" class="jogo" name="Jogo8_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo08_x" class="jogo" name="Jogo8_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo08_2" class="jogo" name="Jogo8_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>09</strong> Freamu.-Leixões</td>
+                        <td><input type="checkbox" ID="Jogo09_1" class="jogo" name="Jogo9_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo09_x" class="jogo" name="Jogo9_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo09_2" class="jogo" name="Jogo9_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>10</strong> Famalicão-Fafe</td>
+                        <td><input type="checkbox" ID="Jogo10_1" class="jogo" name="Jogo10_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo10_x" class="jogo" name="Jogo10_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo10_2" class="jogo" name="Jogo10_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>11</strong> Arsenal-Tottenham</td>
+                        <td><input type="checkbox" ID="Jogo11_1" class="jogo" name="Jogo11_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo11_x" class="jogo" name="Jogo11_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo11_2" class="jogo" name="Jogo11_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>12</strong> Celta-Valência</td>
+                        <td><input type="checkbox" ID="Jogo12_1" class="jogo" name="Jogo12_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo12_x" class="jogo" name="Jogo12_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo12_2" class="jogo" name="Jogo12_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>13</strong> Fiorentina-Sampdória</td>
+                        <td><input type="checkbox" ID="Jogo13_1" class="jogo" name="Jogo13_1" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo13_x" class="jogo" name="Jogo13_x" onclick="boxClicked(this)"></td>
+                        <td><input type="checkbox" ID="Jogo13_2" class="jogo" name="Jogo13_2" onclick="boxClicked(this)"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row">
+                <table class="table table-sm">
+                    <thead>
+                        <tr><th colspan="30">Múltiplas:</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="radio" ID="multiplas2" name="multiplas" value="2"  disabled><br />2</td>
+                            <td><input type="radio" ID="multiplas3" name="multiplas" value="3" disabled><br />3</td>
+                            <td><input type="radio" ID="multiplas4" name="multiplas" value="4" disabled><br />4</td>
+                            <td><input type="radio" ID="multiplas6" name="multiplas" value="6" disabled><br />6</td>
+                            <td><input type="radio" ID="multiplas8" name="multiplas" value="8" disabled><br />8</td>
+                            <td><input type="radio" ID="multiplas9" name="multiplas" value="9" disabled><br />9</td>
+                            <td><input type="radio" ID="multiplas12" name="multiplas" value="12"  disabled/><br />12</td>
+                            <td><input type="radio" ID="multiplas16" name="multiplas" value="16"  disabled/><br />16</td>
+                            <td><input type="radio" ID="multiplas18" name="multiplas" value="18"  disabled/><br />18</td>
+                            <td><input type="radio" ID="multiplas24" name="multiplas" value="24"  disabled/><br />24</td>
+                            <td><input type="radio" ID="multiplas27" name="multiplas" value="27"  disabled/><br />27</td>
+                            <td><input type="radio" ID="multiplas32" name="multiplas" value="32"  disabled/><br />32</td>
+                            <td><input type="radio" ID="multiplas36" name="multiplas" value="36"  disabled/><br />36</td>
+                            <td><input type="radio" ID="multiplas48" name="multiplas" value="48"  disabled/><br />48</td>
+                            <td><input type="radio" ID="multiplas54" name="multiplas" value="54"  disabled/><br />54</td>
+                            <td><input type="radio" ID="multiplas64" name="multiplas" value="64"  disabled/><br />64</td>
+                            <td><input type="radio" ID="multiplas72" name="multiplas" value="72"  disabled/><br />72</td>
+                            <td><input type="radio" ID="multiplas81" name="multiplas" value="81"  disabled/><br />81</td>
+                            <td><input type="radio" ID="multiplas96" name="multiplas" value="96"  disabled/><br />96</td>
+                            <td><input type="radio" ID="multiplas108" name="multiplas" value="108" disabled /><br />108</td>
+                            <td><input type="radio" ID="multiplas128" name="multiplas" value="128" disabled /><br />128</td>
+                            <td><input type="radio" ID="multiplas144" name="multiplas" value="144" disabled /><br />144</td>
+                            <td><input type="radio" ID="multiplas162" name="multiplas" value="162" disabled /><br />162</td>
+                            <td><input type="radio" ID="multiplas192" name="multiplas" value="192" disabled /><br />192</td>
+                            <td><input type="radio" ID="multiplas216" name="multiplas" value="216" disabled /><br />216</td>
+                            <td><input type="radio" ID="multiplas243" name="multiplas" value="243" disabled /><br />243</td>
+                            <td><input type="radio" ID="multiplas256" name="multiplas" value="256" disabled /><br />256</td>
+                            <td><input type="radio" ID="multiplas288" name="multiplas" value="288" disabled /><br />288</td>
+                            <td><input type="radio" ID="multiplas324" name="multiplas" value="324" disabled /><br />324</td>
+                            <td><input type="radio" ID="multiplas384" name="multiplas" value="384" disabled /><br />384</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <hr />
+                <div class="col-md-3">1's: &nbsp;  <span ID="Status1"></span></div>
+                <div class="col-md-3">X's: &nbsp; <span ID="Statusx"></span></div>
+                <div class="col-md-3">2's: &nbsp; <span ID="Status2"></span></div>
+                <div class="col-md-3"><input type="submit" class="form-control btn btn-primary" id="botao" value="Jogar" disabled/></div>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="totobola.js"></script>
+</body>
+</html>

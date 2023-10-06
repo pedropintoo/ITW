@@ -1,0 +1,27 @@
+Sigla URL, HTML, HTTP, JSON
+
+Como por o jQuery nas página ( biblioteca google/remotamente/localmente ( atenção á palavra "pode" ou "deve" )
+Isto não funciona dá erro:  $(div)
+
+Css as características (precedencia e as caracteristicas
+
+data-bind do Knockout ( 4 exemplos que estão nos slides )
+$("div p")
+A condição em JS: "if(i == 0)" ou "if(i==10) then" ou "if(i=0)"
+
+$("div.exemples")
+
+Características do HTTP ( ateçam que o texto não é binário)
+Opcoes:
+a) Feito por transiçoes
+b)conexoes com texto binário
+c) nao orientado a conexoes
+
+$().ready() ou $(document).ready() ou $('document').ready()
+
+Mapas Embed API
+
+Knockout tem vinculações unidemensionais, bidimensionais e variaveis observáveis dependentes de outras
+
+Formato de key/value do JSON
+Caracteristicas do JSON

@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Inscrição Concerto</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!--<link href="../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link href="../lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+        body * {
+            font-family: 'Montserrat', sans-serif;
+            font-size: .9rem;
+        }
+
+        .bannerTop {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://image.shutterstock.com/image-photo/lighting-stage-during-musical-rock-260nw-1145054048.jpg');
+            margin: auto;
+            z-index: -100;
+            color: white;
+            height: 360px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bannerTop">
+        <div class="container py-5">
+            <p class="display-4">Inscrição em Concerto</p>
+            <p class="text-info">Selecione dois locais</p>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <form action="http://192.168.160.36/FormEcho.aspx" method="POST" class="row g-3 needs-validation" novalidate>
+            <div class="form-floating mb-1 col-6">
+                <input type="text" class="form-control" name="name" id="name" required minlength="3" maxlength="100" />
+                <label for="name" class="form-label">Nome</label>
+                <div class="invalid-feedback"><i class=" fa fa-warning"></i> Please choose a username.</div>
+                <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="form-floating mb-1 col-6">
+                <input type="email" class="form-control" name="eMail" id="eMail" required />
+                <label for="eMail" class="form-label">e-Mail</label>
+                <div class="invalid-feedback"><i class=" fa fa-warning"></i> Please choose an email.</div>
+                <div class="valid-feedback">Wait for an email!</div>
+            </div>
+            <div class="form-floating mb-1 col-6">
+                <textarea rows="4" class="form-control" name="morada" id="morada" required minlength="20" maxlength="200" style="height:130px"></textarea>
+                <label for="morada" class="form-label">Morada</label>
+                <div class="invalid-feedback"><i class=" fa fa-warning"></i> Please choose an address.</div>
+                <div class="valid-feedback">I'll send you a letter!</div>
+            </div>
+            <div class="form-floating mb-1 col-6">
+                <div class="form-control" style="height:130px" id="places">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local1" value="100" />
+                        <label for="local1" class="form-check-label">relva frente</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local2" value="80" />
+                        <label for="local2" class="form-check-label">relva trás</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local3" value="50" />
+                        <label for="local3" class="form-check-label">bancada lateral</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="local" id="local4" value="65" />
+                        <label for="local4" class="form-check-label">bancada central</label>
+                        <div class="invalid-feedback mt-2"><i class=" fa fa-warning"></i> Please select at least two places.</div>
+                    </div>
+                </div>
+                <label class="col-lg-2">Local</label>
+            </div>
+            <div class="form-floating mb-1 col-6">
+                <input type="text" class="form-control" name="preco" id="preco" readonly />
+                <label for="preco" class="form-check-label">Preço Máximo</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-sm btn-outline-success"><i class="fa fa-send-o"></i> Enviar</button>
+                <button type="reset" class="btn btn-sm btn-outline-secondary"><i class="fa fa-trash-o"></i> Limpar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+    <!--<script src="../lib/jquery/dist/jquery.min.js"></script>-->
+    <script src="ex2-concerto.js"></script>
+</body>
+</html>

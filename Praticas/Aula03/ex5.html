@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <title>Ex 5</title>
+
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            font-family: 'Open Sans', sans-serif;
+            padding: 0px 60px 10px 60px;
+        }
+
+        .table1 {
+            border-spacing: 0px;
+        }
+
+        .table2 {
+            width: 100%;
+        }
+
+        .SendTable {
+            text-align: center;
+            margin: auto;
+            border-spacing: 0px;
+            
+
+        }
+
+        .enviar, .limpar {
+            height: 50px;
+            width: 100px;
+        }
+
+        .ip {
+            height: 20px;
+        }
+
+        td,tr {
+            width: 110px;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <h1>Informação Pessoal</h1>
+    <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+        <fieldset>
+            <legend>Informação pessoal</legend>
+            <input type="hidden" name="FormName" value="UserForm" />
+            
+            <table class="table1">
+                
+                <tr>
+                        <td class="ip">
+                            <label for="t1"><p>Curso: </p></label>
+                        </td>
+                        <td class="ip">
+                            <select id="t1" required name="Curso">
+                                <option value="" disabled selected hidden> Qual é o curso que frequenta...</option> 
+                                <option value="1">Licenciatura em Engenharia Informática</option> 
+                                <option value="2">Mestrado Integrado em Engenharia de Computadores e Telemática</option> 
+                                <option value="3">Mestrado Integrado Em Engenharia Eletrónica e Telecomunicações</option> 
+                                <option value="4">Outro</option> 
+                            </select>
+                        </td>
+                    
+                </tr>
+                
+                <tr>
+                    <td class="ip"><label for="nome"><p>Nome: </p></label></td>
+                    <td class="ip"><input id="nome" required type="text" name="FirstName" placeholder="Nome" /></td>
+                </tr>
+                <tr>
+                    <td class="ip"><label for="sobrenome"><p>Sobrenome: </p></label></td>
+                    <td class="ip"><input id="sobrenome" required type="text" name="LastName" placeholder="Sobrenome" /></td>
+                </tr>
+                <tr>
+                    <td class="ip"><label for="password"><p>Password: </p></label></td>
+                    <td class="ip"><input id="password" required type="password" name="Password" placeholder="Digite a palavra passe" /></td>
+                </tr>
+
+            </table>
+            
+        </fieldset>
+        
+        <fieldset>
+            <legend><label for="com">Comentários:</label></legend>
+            <textarea id="com" name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>
+        
+        </fieldset>
+
+        <table class="table2">
+            <tr>
+                <td>
+                    <fieldset>
+                    <legend>Meios de transporte</legend>
+                    <input type="checkbox" name="Vehicle" value="Bicicleta">Bicicleta<br />
+                    <input type="checkbox" name="Vehicle" value="Carro">Carro<br />
+                    <input type="checkbox" name="Vehicle" value="Comboio">Comboio<br />
+                
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Cores</legend>
+                        <input type="radio" name="Colors" value="Vermelho">Vermelho<br />
+                        <input type="radio" name="Colors" value="Verde">Verde<br />
+                        <input type="radio" name="Colors" value="Outro">Outro<br />
+                    
+                    </fieldset>
+
+                </td>
+            </tr>
+        </table>
+
+
+        <br>
+        <table class="SendTable">
+            <tr>
+                <td>
+                    <input type="Submit" class="enviar" name="Button"  value="Enviar"/>
+                </td>
+                    
+                <td>
+                    <input type="reset" class="limpar" name="resetBtn" value="Limpar" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

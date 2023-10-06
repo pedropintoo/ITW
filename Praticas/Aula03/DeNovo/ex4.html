@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+    <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+        <h1>Informação Pessoal</h1>
+        <input type="hidden" name="FormName" value="UserForm" />
+        <fieldset>
+            <legend>Informação Pessoal</legend>
+            <dl>
+                <dt>Nome:</dt>
+                <dd>
+                    <input type="text" name="FirstName" value="Joaquim" placeholder="Nome" />
+                </dd>
+                <dt>Sobrenome</dt>
+                <dd>
+                    <input type="text" name="LastName" placeholder="Sobrenome" />
+                </dd>
+                <dt>Palavra-Passe:</dt>
+                <dd>
+                    <input type="password" name="Password" placeholder="Digite a palavra passe" />
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset>
+            <legend>Comentários</legend>
+            <dl>
+                <dt>Comentários:</dt>
+                <dd>
+                    <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>
+                </dd>
+            </dl>
+        </fieldset>
+        <hr/>
+
+        <input name="Button" type="Submit" /><input type="reset" name="resetBtn" value="Reset" />
+
+    </form>
+</body>
+</html>

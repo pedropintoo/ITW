@@ -1,0 +1,9 @@
+﻿/* TODO: escrever o código em falta aqui... */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+.navbar-text a {
+  color: #0d6efd;
+  text-decoration: none;
+}

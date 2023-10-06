@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chess</title>
+    <meta charset="utf-8">
+    <style>
+        body,html {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .image {
+            position: relative;
+            background-image: url(https://media.istockphoto.com/photos/chess-picture-id1306675949?b=1&k=20&m=1306675949&s=170667a&w=0&h=e3FnS8JlgGp2hG7k0do2VEEuTUd6b2wVk3Z8KT7mRAo=);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100%;
+            filter: blur(3px)
+        }
+        
+
+
+        table {
+            position: absolute;
+            top: 1%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            border: 10px solid black;
+            border-spacing: 0px;
+        }
+
+        td img {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: block;
+            margin: auto;
+        }
+
+        td {
+            width: 100px;
+            height: 100px;  
+            table-layout:fixed;
+            margin: auto;
+            padding: 0px;
+        }
+
+        td:hover{
+            background-image: none;
+            background-color: rgba(26, 187, 26, 0.905);
+        }
+        
+        .white {
+            background-image: url(http://unblast.com/wp-content/uploads/2018/12/Wood-Pattern-2.jpg);
+        }
+        .black {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYZNHHpClLel7YekAT21rfCIBcSvivdunSxjb9Cktl7l3Xq1hSyc0NNl7v7pb7Pm6gK1M&usqp=CAU);
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="image"></div>
+    <div class="board">
+    <table>
+
+        <tr>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/br.png" alt="BlackRook" ></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bn.png" alt="BlackKnight"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bb.png" alt="BlackBishop"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bq.png" alt="BlackQueen"></td>            
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bk.png" alt="BlackKing"></td>            
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bb.png" alt="BlackBishop"></td>            
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bn.png" alt="BlackKnight"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/br.png" alt="BlackRook"></td>
+        </tr>
+
+        <tr>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>           
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>            
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/bp.png" alt="BlackPawn"></td>
+        </tr>
+        
+        <tr>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>            
+            <td class="white"></td>            
+            <td class="black"></td>            
+            <td class="white"></td>
+            <td class="black"></td>
+        </tr>
+
+        <tr>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>           
+            <td class="black"></td>
+            <td class="white"></td>            
+            <td class="black"></td>
+            <td class="white"></td>
+        </tr>
+        
+        <tr>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>            
+            <td class="white"></td>            
+            <td class="black"></td>            
+            <td class="white"></td>
+            <td class="black"></td>
+        </tr>
+
+        <tr>
+            <td class="black"></td>
+            <td class="white"></td>
+            <td class="black"></td>
+            <td class="white"></td>           
+            <td class="black"></td>
+            <td class="white"></td>            
+            <td class="black"></td>
+            <td class="white"></td>
+        </tr>
+        
+        <tr>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>            
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>            
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>            
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wp.png" alt="WhitePawn"></td>
+        </tr>
+
+        <tr>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wr.png" alt="WhiteRook"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wn.png" alt="WhiteKnight"></td>
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wb.png" alt="WhiteBishop"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wq.png" alt="WhiteQueen"></td>            
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wk.png" alt="WhiteKing"></td>            
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wb.png" alt="WhiteBishop"></td>            
+            <td class="black"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wn.png" alt="WhiteKnight"></td>
+            <td class="white"><img src="https://images.chesscomfiles.com/chess-themes/pieces/lolz/150/wr.png" alt="WhiteRook"></td>
+        </tr>
+
+
+        
+    </table>
+    </div>
+</body>
+</html>

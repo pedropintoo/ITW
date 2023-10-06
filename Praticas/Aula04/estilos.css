@@ -1,0 +1,24 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+.menutop {top: 0; z-index: 99999999999; position: fixed; width: 100%;height: 40px;margin: auto;background-color: rgb(41, 41, 41);}
+.menutop li a{display: inline; height: 20px; padding: 10px 20px 10px 20px; float: left; color: white; border-right: 1px solid white; margin-left: 0px; left: 0px; text-decoration: none;}
+.menutop ul{list-style-type: none;padding: 0px;margin: 0px; overflow: hidden;}
+.menutop li a:hover{background-color: rgb(106, 106, 106);}
+.menutop li a.active:hover{color:white; background-color: rgb(106, 106, 106);}
+
+.active {background-color: rgb(38, 207, 38);}
+
+
+.banner {width: 1220px; height: 400px; margin: auto; background-image: url("bears.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover;}
+
+
+.zonacentral{width: 1000px; height: 100%; margin: auto; margin-bottom: 40px ;}
+
+.content{width: 800px; min-height: 400px;  float: left; margin-bottom: 40px ;}
+
+.ad{width: 200px; min-height: 400px; background-color: yellow; float: left; margin-bottom: 40px ;}
+
+.footer{width: 100%; margin:auto; text-align: center; height: 40px; background-color: white; }
+.footer hr{width: 1000px;}
+.footer p{margin-top: 3px; margin-bottom: 15px;}

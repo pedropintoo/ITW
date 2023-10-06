@@ -1,0 +1,5 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.banner {height: 450px; margin: auto; background-image: url("bears.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover;}

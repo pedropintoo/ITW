@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Exemplo de um formulário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <
+    <link href="site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="border-bottom py-2 mb-2">Ficha de inscrição</h1>
+        <form action="http://192.168.160.36/FormEcho.aspx" name="FichaInscricao">
+            <div class="row form-group">
+                <label for="Nome" class="col-md-2 col-form-label">Nome</label>
+                <div class="col-md-10">
+                    <input type="text" name="Nome" id="Nome" class="form-control" />
+                    <div class="d-none text-danger col-form-label" id="NomeError"><i class="fa fa-exclamation-triangle"></i> Este campo é de preenchimento obrigatório (Min: 3 letras).</div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="Morada" class="col-md-2 col-form-label">Morada</label>
+                <div class="col-md-10">
+                    <textarea name="Morada" id="Morada" class="form-control" rows="4"></textarea>
+                    <div class="d-none text-danger col-form-label" id="MoradaError"><i class="fa fa-exclamation-triangle"></i> Este campo é de preenchimento obrigatório (Min: 3 palavras).</div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <label for="Curso" class="col-md-2 col-form-label">Curso</label>
+                <div class="col-md-10">
+                    <select name="Curso" id="Curso" class="form-control">
+                        <option value="">--- Selecione um Curso ---</option>
+                        <option value="1">Licenciatura em Engenharia Informática</option>
+                        <option value="2">Mestrado Integrado em Engenharia de Computadores e Telemática</option>
+                        <option value="3">Mestrado Integrado em Engenharia Eletrónica e Telecomunicações</option>
+                        <option value="9">Outro</option>
+                    </select>
+                    <div class="d-none text-danger col-form-label" id="CursoError"><i class="fa fa-exclamation-triangle"></i> Este campo é de preenchimento obrigatório (Escolha um curso).</div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-2">Meios de transporte</div>
+                <div class="col-md-4 ">
+                    <div class="form-check">
+                        <input type="checkbox" name="vehicle" class="form-check-input" value="Bicicleta" id="bicicleta"><label class="form-check-label" for="bicicleta">Bicicleta</label><br />
+                        <input type="checkbox" name="vehicle" class="form-check-input" value="Carro" id="carro"><label class="form-check-label" for="carro">Carro</label><br />
+                        <input type="checkbox" name="vehicle" class="form-check-input" value="Comboio" id="comboio"><label class="form-check-label" for="comboio">Comboio</label>
+                    </div>
+                    <div class="d-none text-danger col-form-label" id="VehicleError"><i class="fa fa-exclamation-triangle"></i> Este campo é de preenchimento obrigatório (Escolha, pelo menos, dois meios de transporte).</div>
+                </div>
+                <div class="col-md-2">Cor</div>
+                <div class="col-md-4 ">
+                    <div class="form-check">
+                        <input type="radio" name="cor" class="form-check-input" value="Vermelho" id="vermelho"><label class="form-check-label" for="vermelho">Vermelho</label><br />
+                        <input type="radio" name="cor" class="form-check-input" value="Verde" id="verde"><label class="form-check-label" for="verde">Verde</label><br />
+                        <input type="radio" name="cor" class="form-check-input" value="Azul" id="azul"><label class="form-check-label" for="azul">Azul</label>
+                    </div>
+                    <div class="d-none text-danger col-form-label" id="CorError"><i class="fa fa-exclamation-triangle"></i> Este campo é de preenchimento obrigatório (Escolha uma cor).</div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-md-10 offset-md-2">
+                    <input type="Submit" name="submitBtn" value="Enviar" class="btn btn-primary" onclick="return validate()" />
+                    <input type="reset" name="resetBtn" value="Limpar" class="btn btn-secondary" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="forms.js"></script>
+</body>
+</html>

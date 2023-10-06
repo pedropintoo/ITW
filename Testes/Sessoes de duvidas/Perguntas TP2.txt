@@ -1,0 +1,65 @@
+1-O significa a sigla AJAX:
+a) Automatic JavaScript and XML
+b) Asynchronous JavaScript and XML
+c) Automatic JavaScript Asynchronous XML
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 1: b)
+
+2-Qual dos selectores jQuery seleciona o primeiro marcador <li> de todos os elementos <ul>:
+a) $("ul li.first")
+b) $("ul li:first")
+c) $("ul.first li.first")
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 2: e) seria $("ul li:first-child")
+
+3-A sintaxe do jQuery foi projetada para facilitar:
+a) Seleção de elementos do DOM
+b) Manipulação de eventos
+c) Desenvolvimento de aplicações AJAX
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 3: d)
+
+4-Vantagens do jQuery:
+a) Performance
+b) Biblioteca pequena
+c) Separação entre JavaScript e HTML
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 4: c)
+
+5-O significa a sigla JSON:
+a) JavaScript Object Notation
+b) JQueryScript Online Notation
+c) JavaScript Optimize Notation
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 5: a)
+
+6-Qual é o formato JSON:
+a) HTML (.html)
+b) JavaScript (.js)
+c) Texto (.txt)
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 6: c)
+
+7-Qual destas é uma característica do KnockoutJS:
+a) Templating
+b) Acompanhamento de dependências
+c) Livre, código aberto
+d) Todas as anteriores
+e) Nenhuma
+
+Resposta 7: d)
+
+
+

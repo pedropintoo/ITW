@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>ITW - teste prático 4 2022/23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="teste4.css" />
+  </head>
+  <body>
+    <!-- Colocar aqui o carousel -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="true"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Imagens/Header1.jpg" class="d-block w-100" alt="Slide1" />
+        </div>
+        <div class="carousel-item">
+          <img src="Imagens/Header2.jpg" class="d-block w-100" alt="Slide2" />
+        </div>
+        <div class="carousel-item">
+          <img src="Imagens/Header3.jpg" class="d-block w-100" alt="Slide3" />
+        </div>
+        <div class="carousel-item">
+          <img src="Imagens/Header4.jpg" class="d-block w-100" alt="Slide4" />
+        </div>
+        <div class="carousel-item">
+          <img src="Imagens/Header5.png" class="d-block w-100" alt="Slide5" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="container mt-3">
+      <form action="http://192.168.160.36/FormEcho.aspx">
+        <div class="row">
+          <div class="col-md-1 offset-6 text-end">
+            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-1 text-end">
+            <span
+              class="form-control"
+              id="quantidades"
+              title="Quantidade total de produtos"
+              >0</span
+            >
+          </div>
+          <div class="col-md-2 text-end">
+            <span class="form-control" id="total" title="Preço total da compra"
+              >0.00</span
+            >
+          </div>
+          <div class="col-md-1 text-end ms-auto">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              onclick="return validar()"
+              title="Enviar pedido"
+            >
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="limpar()"
+              title="Limpar compra"
+            >
+              <i class="fa fa-trash-o"></i>
+            </button>
+          </div>
+        </div>
+        <hr />
+        <h1 class="border-bottom my-3 py-3">Promoções Diárias</h1>
+        <div class="row text-center">
+          <div class="col-2">
+            <img src="imagens/media_0.jpg" />
+            <p>
+              Bombons de Chocolate Caja Roja<br />Nestlé<br /><small
+                >emb. 800 gr</small
+              >
+            </p>
+            <p>
+              <span class="text-danger">11,99 €</span>
+              <span class="fw-bold"><s>23,98 €</s></span>
+            </p>
+            <input
+              type="hidden"
+              name="precoproduto1"
+              id="precoproduto1"
+              value="11.99"
+            />
+            <input type="hidden" name="produto1" id="produto1" value="0" />
+          </div>
+          <div class="col-2">
+            <img src="imagens/media_1.jpg" />
+            <p>
+              Falafel 26 unidades<br />Iglo Green Cuisine<br /><small
+                >emb. 450 gr</small
+              >
+            </p>
+            <p><span class="text-danger">4,49 €</span></p>
+            <input
+              type="hidden"
+              name="precoproduto2"
+              id="precoproduto2"
+              value="4.49"
+            />
+            <input type="hidden" name="produto2" id="produto2" value="0" />
+          </div>
+          <div class="col-2">
+            <img src="imagens/media_2.jpg" />
+            <p>
+              Casinha com Carimbos + 7 Marcadores LOL<br />L.O.L. Surprise!<br /><small
+                >1 un</small
+              >
+            </p>
+            <p>
+              <span class="text-danger">12,99 €</span>
+              <span class="fw-bold"><s>19,99 €</s></span>
+            </p>
+            <input
+              type="hidden"
+              name="precoproduto3"
+              id="precoproduto3"
+              value="12.99"
+            />
+            <input type="hidden" name="produto3" id="produto3" value="0" />
+          </div>
+          <div class="col-2">
+            <img src="imagens/media_3.jpg" />
+            <p>Jogo Risk Refresh<br />Hasbro<br /><small>1 un</small></p>
+            <p>
+              <span class="text-danger">27,99 €</span>
+              <span class="fw-bold"><s>39,99 €</s></span>
+            </p>
+            <input
+              type="hidden"
+              name="precoproduto4"
+              id="precoproduto4"
+              value="27.99"
+            />
+            <input type="hidden" name="produto4" id="produto4" value="0" />
+          </div>
+          <div class="col-2">
+            <img src="imagens/media_4.jpg" />
+            <p>
+              Bicicleta de Criança Desportiva 8-12 A Roda 24" 18 Velocidades
+              Kreativ Azul Escura<br />David M. Lopes<br /><small
+                >1 UN ~ 200g | 0,99 €/Kg</small
+              >
+            </p>
+            <p>
+              <span class="text-danger">199,99 €</span>
+              <span class="fw-bold"><s>249,99 €</s></span>
+            </p>
+            <input
+              type="hidden"
+              name="precoproduto5"
+              id="precoproduto5"
+              value="199.99"
+            />
+            <input type="hidden" name="produto5" id="produto5" value="0" />
+          </div>
+          <div class="col-2">
+            <img src="imagens/media_5.jpg" />
+            <p>
+              Ração para Cão Mini Salmão<br />Affinity Libra<small
+                >1 UN ~ 200g | 0,99 €/Kg</small
+              >
+            </p>
+            <p>
+              <span class="text-danger">19,13 €</span>
+              <span class="fw-bold"><s>21,25 €</s></span>
+            </p>
+            <input
+              type="hidden"
+              name="precoproduto6"
+              id="precoproduto6"
+              value="19.13"
+            />
+            <input type="hidden" name="produto6" id="produto6" value="0" />
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="comprar(1)"
+            >
+              <i class="fa fa-shopping-bag"></i> Comprar
+            </button>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="comprar(2)"
+            >
+              <i class="fa fa-shopping-bag"></i> Comprar
+            </button>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="comprar(3)"
+            >
+              <i class="fa fa-shopping-bag"></i> Comprar
+            </button>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="comprar(4)"
+            >
+              <i class="fa fa-shopping-bag"></i> Comprar
+            </button>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="comprar(5)"
+            >
+              <i class="fa fa-shopping-bag"></i> Comprar
+            </button>
+          </div>
+          <div class="col-2">
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="comprar(6)"
+            >
+              <i class="fa fa-shopping-bag"></i> Comprar
+            </button>
+          </div>
+        </div>
+      </form>
+      <hr />
+      <p class="navbar-text small d-block">
+        Esta página possui informação retirada de
+        <a
+          href="https://www.continente.pt/stores/continente/pt-pt/public/Pages/homepage.aspx"
+          target="_blank"
+          >https://www.continente.pt/stores/continente/pt-pt/public/Pages/homepage.aspx</a
+        >. Não pode ser confundida com o site original e serve apenas de exemplo
+        para este teste prático.
+      </p>
+    </div>
+    <script src="teste4.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
